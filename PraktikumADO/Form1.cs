@@ -69,6 +69,13 @@ namespace PraktikumADO
 
         private void btnHitungMK_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                
+            }
         }
         
         private void label1_Click(object sender, EventArgs e)
