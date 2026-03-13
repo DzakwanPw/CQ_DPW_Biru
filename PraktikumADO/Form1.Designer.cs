@@ -36,6 +36,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnHitungDosen = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,9 +98,9 @@
             // 
             // btnHitungDosen
             // 
-            this.btnHitungDosen.Location = new System.Drawing.Point(171, 370);
+            this.btnHitungDosen.Location = new System.Drawing.Point(130, 370);
             this.btnHitungDosen.Name = "btnHitungDosen";
-            this.btnHitungDosen.Size = new System.Drawing.Size(117, 51);
+            this.btnHitungDosen.Size = new System.Drawing.Size(128, 51);
             this.btnHitungDosen.TabIndex = 6;
             this.btnHitungDosen.Text = "Hitung Dosen";
             this.btnHitungDosen.UseVisualStyleBackColor = true;
@@ -107,18 +108,29 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(328, 373);
+            this.button1.Location = new System.Drawing.Point(328, 370);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 48);
+            this.button1.Size = new System.Drawing.Size(140, 51);
             this.button1.TabIndex = 7;
             this.button1.Text = "Update SKS";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnUpdateSKS_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(531, 370);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 51);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Tambah Prodi";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHitungDosen);
             this.Controls.Add(this.btnUpdate);
@@ -144,6 +156,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnHitungDosen;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
