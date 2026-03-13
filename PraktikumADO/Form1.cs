@@ -131,6 +131,24 @@ namespace PraktikumADO
             }
         }
 
+        private void btnUpdateSKS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show(hasil + " data SKS berhasil diperbarui.");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
