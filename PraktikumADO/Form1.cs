@@ -97,7 +97,7 @@ namespace PraktikumADO
                 Koneksi();
                 conn.Open();
 
-                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001";
+                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001'";
 
                 cmd = new SqlCommand(query, conn);
 
@@ -112,13 +112,33 @@ namespace PraktikumADO
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
+        private void btnHitungDosen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); 
+                conn.Open(); 
+                string query = "SELECT COUNT(*) FROM Dosen"; 
+                cmd = new SqlCommand(query, conn);
+                int jumlah = (int)cmd.ExecuteScalar();
+                txtHasil.Text = jumlah.ToString();
+                conn.Close(); 
+            }
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHitungMhs_Click_1(object sender, EventArgs e)
         {
 
         }
