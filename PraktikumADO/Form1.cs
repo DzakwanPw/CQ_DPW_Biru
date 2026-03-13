@@ -155,7 +155,7 @@ namespace PraktikumADO
             {
                 Koneksi();
                 conn.Open();
-                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
+                string query = "INSERT INTO ProgramStudi VALUES ('MI02','Manajemen Informatika')";
                 cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Program Studi berhasil ditambahkan!");
