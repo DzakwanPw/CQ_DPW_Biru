@@ -125,7 +125,10 @@ namespace PraktikumADO
                 txtHasil.Text = jumlah.ToString();
                 conn.Close(); 
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); // Menangkap error jika ada [cite: 62, 63]
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
